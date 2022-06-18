@@ -3,4 +3,12 @@
 
 names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
 
-# TODO: your code here
+names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
+
+longe_name = ""
+
+for i in names:
+     if len(i) > len(longe_name):
+         longe_name = i
+
+print(longe_name)
