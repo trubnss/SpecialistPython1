@@ -21,5 +21,17 @@
 a = int(input("a: "))
 b = int(input("b: "))
 
-# TODO: you code here...
+first_number = int(input("Ввести первое число: "))
+second_number = int(input("Ввести второе число: "))
+
+if first_number <= second_number:
+    while first_number <= second_number:
+        if first_number % 5 == 0 and first_number != 0:
+            print(first_number)
+        first_number +=1
+else:
+    while first_number >= second_number:
+        if first_number % 5 == 0 and first_number != 0:
+            print(first_number)
+        first_number -=1
 ```
