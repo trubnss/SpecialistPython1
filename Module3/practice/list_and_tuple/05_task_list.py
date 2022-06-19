@@ -5,7 +5,18 @@
 # Исходные данные:
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 
-# TODO: your code here
+import math
+
+fruits = ["яблоко", "банан", "киви", "арбуз"]
+max_len = 0
+max_len_namber = int(math.log10(len(fruits)))+1
+
+for fruit in fruits:
+   if len(fruit) > max_len:
+      max_len = len(fruit)
+
+for num, fruit in enumerate(fruits, 1):
+    print(f"{num:<{max_len_namber}}. {fruit:>{max_len}}")
 
 # Пример вывода:
 # 1. яблоко
