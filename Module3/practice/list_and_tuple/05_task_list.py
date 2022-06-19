@@ -5,11 +5,9 @@
 # Исходные данные:
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 
-import math
-
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 max_len = 0
-max_len_namber = int(math.log10(len(fruits)))+1
+max_len_namber = len(str(len(fruits)))
 
 for fruit in fruits:
    if len(fruit) > max_len:
