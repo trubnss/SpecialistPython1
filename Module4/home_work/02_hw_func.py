@@ -5,8 +5,20 @@
 # При решении задачи необходимо использовать функцию расстояния между двумя точками.
 
 def distance(x1, y1, x2, y2):
-    # TODO: тело, которое вы реализовали на практической работе
-    pass
+    def distance(x1, y1, x2, y2):
+    d = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+    return d
+
+ab = distance(20, 20, -7, -7)
+bc = distance(-8, 8, 4, 4)
+ca = distance(15, 16, 8, 8)
+
+if ab < bc and ab < ca:
+    print("Самый короткий отрезок AB: ", "%.2f" % ab)
+elif bc < ab and bc < ca:
+    print("Самый короткий отрезок ВС: ", "%.2f" % bc)
+else:
+    print("Самый короткий отрезок СА: ", "%.2f" % ca)
 
 
 # TODO: your code here
