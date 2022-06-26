@@ -12,8 +12,21 @@ path = "dir/limericks.txt"  # вместо dir подставь название
 # Открываем файл на чтение
 f = open(path, "r")
 # В переменную line считываем строку за стройкой из файла(f)
-for line in f:
-    ...
 
+f = open("limericks.txt", "r", encoding="utf-8")
+
+sum_simbol = 0
+sum_poem = 1
+
+for line in f:
+    if line == "\n":
+        sum_poem += 1
+    print(line.rstrip())
+    sum_simbol += len(line.replace(" ", ""))
+
+
+
+print(sum_simbol)
+print(sum_poem)
 # Подсказка: пустые строки выглядят так "\n". Помните? Строка считывается вместе с символом переноса!
 # Применение метода "\n".rstrip() --> "" вернет вам пустую строку, строку из НУЛЯ символов.
