@@ -15,12 +15,20 @@
 
 ### Решение задачи
 
-```python
+import os
+import re
+
+path = os.path.join('files', 'info.txt')
+re_num = re.compile(r'^\-?\d+$')
+
 summa = 0
-with open("data/info.txt", "r") as f:
-    pass
+with open("info.txt", "r") as file:
+    for line in file:
+        if re.match(re_num, line):
+            summa += int(line)
 
 print(f"Сумма чисел = {summa}")
+
 # Уточнение: в сумму добавляем только те значения, которые можно преобразовать к int'у
 # Например: int("-26") --> -26, а int("--26") --> ошибка
 ```
