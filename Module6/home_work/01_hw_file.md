@@ -14,10 +14,16 @@
 
 ### Решение задачи
 
-```python
-def log(text, file="log.txt"):
-    ...
+def log(text: str, name_file='log.txt'):
 
+    with open(name_file, 'a') as file:
+        file.write(text + "\n")
+
+
+if __name__ == '__main__':
+    log('hello world')
+    log('message', 'log01.txt')
+    
 log("hello world")  # дописывает "hello world" в конец файла log.txt
 log("message", "log01.txt")  # дописывает "message" в конец файла log01.txt
 # Уточнение: функция log() все сообщения должна записывать на отдельных строках
